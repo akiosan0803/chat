@@ -1,50 +1,32 @@
-## user table
+# README
 
-||Column|Type|Options|
-|------|----|-------|
-|name|string|null: false, index: true|
-|email|string|null: false|
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-### Association
-has_many:messages
-has_many:groups,through: :members
-has_many:members
+Things you may want to cover:
 
-## groups table
+* Ruby version
 
-||Column|Type|Options|
-|------|----|-------|
-|name|string|null: false|
+* System dependencies
 
+<<<<<<< HEAD
 ### Association
 
 has_many:users,through::members
 has_many:messages
 has_many:members
+=======
+* Configuration
+>>>>>>> parent of bdc022f... readme commit
 
-## members table
+* Database creation
 
-||Column|Type|Options|
-|------|----|-------|
-|user_id|integer|null: false,foreign_key: true|
-|group_id|integer|null: false,foreign_key:true|
+* Database initialization
 
-### Associtation
+* How to run the test suite
 
-belongs_to:group
-belong_to:user
+* Services (job queues, cache servers, search engines, etc.)
 
-## messages table
+* Deployment instructions
 
-||Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-|image|string||
-|user_id|integer|null:false,foreign_key:true|
-|group_id|integer|null:false,foreign_key:true|
-
-### Associtation
-
-belongs_to:group
-belongs_to:user
-
+* ...
