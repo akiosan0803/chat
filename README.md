@@ -1,4 +1,4 @@
-## group_members テーブル
+## group_users テーブル
 
 |Column|Type|Options|
 |------|----|-------|
@@ -22,17 +22,17 @@
 - belongs_to :group
 - belongs_to :user
 
-## members テーブル
+## users テーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, unique: true|
+|name|string|null: false, unique: true,index: true|
 |email|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
-- has_many :group_members
-- has_many :group,through::group_members
+- has_many :group_users
+- has_many :groups,through::group_users
 
 ## groups テーブル
 
@@ -42,5 +42,5 @@
 
 ### Association
 - has_many :messages
-- has_many :group_members
-- has_many:users::group_members
+- has_many :group_users
+- has_many:users, through: :group_users
