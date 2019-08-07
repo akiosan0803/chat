@@ -1,4 +1,4 @@
-## grup_members テーブル
+## group_members テーブル
 
 |Column|Type|Options|
 |------|----|-------|
