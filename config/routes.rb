@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root to:'message#index'
+  devise_for :users
+  get 'home/index'
+  get 'home/show'
+  root to:'home#index'
 end
