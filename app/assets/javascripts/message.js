@@ -13,6 +13,9 @@ $(function() {
                       <p class="lower-message__content">
                         ${message.content}
                       </p>
+                      <p class="lower-message__content">
+                        ${message.image}
+                      </p>
                   </div>
                 </div>`
     return html;
@@ -37,8 +40,8 @@ $(function() {
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $('#new_message').val('');
-      $(".form__submit").prop("disabled", false);
+      $('#new_message')[0].reset();
+      $('.form__submit').prop("disabled", false);
       scroll();
     })
 
