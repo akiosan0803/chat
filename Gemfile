@@ -72,4 +72,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem "nokogiri", ">= 1.10.4"
 gem 'pry-rails'
+gem "devise", ">= 4.7.1"
 gem 'jquery-turbolinks'
