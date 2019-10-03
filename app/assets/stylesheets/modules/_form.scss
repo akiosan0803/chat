@@ -6,7 +6,9 @@
     &__message {
       border: none;
       float: left;
+      box-sizing: border-box;
       height: 50px;
+      padding: 0 10px;
       width: calc(100% - 150px);
     }
     &__mask {
