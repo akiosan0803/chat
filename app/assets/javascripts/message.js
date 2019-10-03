@@ -39,7 +39,6 @@ $(document).on('turbolinks:load', function(){
       contentType: false
     })
     .done(function(data){
-      console.table(data)
       var html = buildHTML(data);
       $('.messages').append(html);
       $('#new_message')[0].reset();
@@ -64,7 +63,6 @@ $(document).on('turbolinks:load', function(){
       })
       
       .done(function(messages){
-        console.table(messages)
         var insertHTML = '';
         messages.forEach(function(message){
           insertHTML = buildHTML(message);
