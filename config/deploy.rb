@@ -2,7 +2,7 @@
 lock '3.11.2'
 
 set :application, 'chat'
-set :repo_url, 'git@github.com:akiosan/chat.git'
+set :repo_url, 'git@github.com:akiosan0803/chat.git'
 set :linked_dirs, fetch(:linked_dirs,[]).push('log','tmp/pids','tmp/cache','tmp/sockets','vendor/bundle','public/system','public/uploads')
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1'
