@@ -7,12 +7,12 @@ set :linked_dirs, fetch(:linked_dirs,[]).push('log','tmp/pids','tmp/cache','tmp/
 set :rbenv_type, :user
 set :rbenv_ruby, '2.5.1'
 set :ssh_options, auth_methods: ['publickey'],
-                  keys: ['ssh -i chat.pem ec2-user@52.194.53.62']
+                  keys: ['~/.ssh/chat.pem']
 set :unicorn_config_path, -> {"#{current_path}/config/unicorn.rb"}
 set :keep_releases, 5
 
 after 'deploy:publishing', 'deploy:restart'
-namespace :deploy deploy
+namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
