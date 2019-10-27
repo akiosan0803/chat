@@ -80,6 +80,7 @@ gem "font-awesome-rails"
 gem "devise"
 gem "jquery-rails"
 gem 'carrierwave'
+gem 'fog-aws'
 gem 'mini_magick'
 gem "nokogiri", ">= 1.10.4"
 gem 'pry-rails'
