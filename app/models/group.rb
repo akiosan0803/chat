@@ -1,6 +1,6 @@
 class Group < ApplicationRecord
   has_many :messages
-  has_many :group_user
+  has_many :group_user,foreign_key:'user_id'
   has_many :user, through: :group_user
   validates :name, presence: true, uniqueness:true
 
