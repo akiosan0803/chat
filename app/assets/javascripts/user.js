@@ -46,18 +46,16 @@ $(document).on('turbolinks:load', function(){
     }
   });
     
-    $(document).on("click" ,".user-search-add" ,function(){
-    var user_id = $(this).attr("data-user-id")
-    var user_name = $(this).attr("data-user-name")
-    $(this).parent().remove();
-
-    var serch_user = $("#chat-group-user-22.chat-group-user.clearfix")
-    var html = `<div class='chat-group-user'>
-                  <input name='group[user_ids][]' type='hidden' value=${user_id}>
-                  <p class='chat-group-user__name'>${user_name}</p>
-                  <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
-                </div>`
-    serch_user .append(html)
+  $(document).on("click" ,".user-search-add" ,function(){
+  var user_id = $(this).attr("data-user-id")
+  var user_name = $(this).attr("data-user-name")
+  $(this).parent().remove();
+  var html = `<div class='chat-group-user'>
+                <input name='group[user_ids][]' type='hidden' value=${user_id}>
+                <p class='chat-group-user__name'>${user_name}</p>
+                <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
+              </div>`
+  $(".js-add-user").append(html)
   });
 
   $(document).on("click" ,".user-search-remove" ,function(){
