@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_140943) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["group_id"], name: "index_group_users_on_group_id"
-    t.index ["user_id"], name: "index_group_users_on_users_id"
+    t.index ["user_id"], name: "index_group_users_on_user_id"
   end
 
   create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_140943) do
   end
 
   add_foreign_key "group_users", "groups"
-  add_foreign_key "group_users", "users", column: "users_id"
+  add_foreign_key "group_users", "users"
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
 end
