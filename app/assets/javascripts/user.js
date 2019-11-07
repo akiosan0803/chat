@@ -42,11 +42,11 @@ $(document).on('turbolinks:load', function(){
       })
       .fail(function() {
           alert('ユーザー検索に失敗しました');
-      });
+      })
     }
   });
     
-  $(document).on("click" ,".user-search-add" ,function(){
+  $("#user-search-result").on("click" ,".user-search-add" ,function(){
   var user_id = $(this).attr("data-user-id")
   var user_name = $(this).attr("data-user-name")
   $(this).parent().remove();
@@ -56,6 +56,7 @@ $(document).on('turbolinks:load', function(){
                 <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
               </div>`
   $(".js-add-user").append(html)
+  console.log(this)
   });
 
   $(document).on("click" ,".user-search-remove" ,function(){
