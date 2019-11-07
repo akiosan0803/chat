@@ -49,7 +49,6 @@ $(document).on('turbolinks:load', function(){
   $(document).on("click" ,".user-search-add" ,function(){
   var user_id = $(this).attr("data-user-id")
   var user_name = $(this).attr("data-user-name")
-  console.log()
   $(this).parent().remove();
   var html = `<div class='chat-group-user'>
                 <input name='group[user_ids][]' type='hidden' value=${user_id}>
